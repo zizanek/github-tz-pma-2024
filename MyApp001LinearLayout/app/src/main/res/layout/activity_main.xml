@@ -61,8 +61,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="4"
-            android:text="Odeslat"
-            android:textSize="18dp"
+            android:text="@string/btn_send"
+            android:textSize="18sp"
             android:layout_marginRight="10dp"/>
 
         <Button
@@ -72,8 +72,8 @@
             android:layout_weight="4"
             android:backgroundTint="@color/myColor02"
             android:textColor="@color/myColor03"
-            android:text="Vymazat"
-            android:textSize="18dp"/>
+            android:text="@string/btn_delete"
+            android:textSize="18sp"/>
 
     </LinearLayout>
 
@@ -84,8 +84,6 @@
         android:hint="Informace"
         android:layout_marginTop="20dp"
         android:padding="20dp"
-        android:textSize="20dp"/>
-
+        android:textSize="20sp"/>
 </LinearLayout>
 
-<!-- toto je komentář -->
