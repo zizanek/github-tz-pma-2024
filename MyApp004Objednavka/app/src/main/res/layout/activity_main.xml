@@ -10,12 +10,74 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvNadpis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Jaké kolo si chcete objednat?"
+        android:textAlignment="center"/>
+
+    <RadioGroup
+        android:id="@+id/rgKola"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbKolo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OIZ M10"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/rbKolo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OIZ M20"/>
+
+        <RadioButton
+            android:id="@+id/rbKolo3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OIZ M30"/>
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/cbVidlice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="lepší vidlice"/>
+
+    <CheckBox
+        android:id="@+id/cbSedlo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="lepší sedlo"/>
+
+    <CheckBox
+        android:id="@+id/cbRiditka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Karbonová řidítka"/>
+
+    <Button
+        android:id="@+id/btnObjednavka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Objednat kolo"/>
+
+    <TextView
+        android:id="@+id/tvObjednavka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Souhrn objednávky: "/>
+
+    <ImageView
+        android:id="@+id/ivKolo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/oiz_m10_tr"
+        android:scaleType="centerInside"/>
 
 </LinearLayout>
