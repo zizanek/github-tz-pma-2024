@@ -44,13 +44,20 @@ class MainActivity : AppCompatActivity() {
             binding.tvObjednavka.text = objednavkaText
 
         }
-        
 
+        // Změna obrázku v závislosti na vybraném radioButtonu
 
+        binding.rbKolo1.setOnClickListener {
+            binding.ivKolo.setImageResource(R.drawable.oiz_m10_tr)
+        }
 
+        binding.rbKolo2.setOnClickListener {
+            binding.ivKolo.setImageResource(R.drawable.oiz_m20_tr)
+        }
 
-
-
+        binding.rbKolo3.setOnClickListener {
+            binding.ivKolo.setImageResource(R.drawable.oiz_m30_tr)
+        }
 
     }
 }
