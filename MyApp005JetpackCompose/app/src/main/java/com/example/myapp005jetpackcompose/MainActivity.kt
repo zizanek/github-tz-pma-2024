@@ -10,6 +10,8 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
@@ -131,10 +133,34 @@ fun ComposePerson() {
                 horizontalArrangement = Arrangement.spacedBy(16.dp)
             ) {
 
+                Button(
+                    onClick = {
+                        resultText = "Jmenuji se $name $surname. Je mi $age let a moje bydliště je $place."
+                    },
+                    modifier = Modifier.weight(1f)
+                ) {
+                    Text("Odeslat")
+                }
+
+                Button(
+                    onClick = {
+                        name = ""
+                        surname = ""
+                        age = ""
+                        place = ""
+                        resultText = ""
+                    },
+                    modifier = Modifier.weight(1f),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color(0xFFB71C1C),  // Hexadecimální barva pro pozadí tlačítka
+                        contentColor = Color.White  // Barva textu na tlačítku
+                    )
+                ) {
+                    Text("Vymazat")
+                }
 
 
 
-                
             }
 
 
