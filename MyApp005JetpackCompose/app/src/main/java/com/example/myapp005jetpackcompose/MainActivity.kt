@@ -14,6 +14,10 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
@@ -34,6 +38,32 @@ class MainActivity : ComponentActivity() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ComposePerson() {
+
+
+    /*
+    První řádek inicializuje stav
+    pro první textové pole (zde pro jméno).
+    V Compose je důležité mít stav pro každý vstup,
+    aby se mohly UI prvky aktualizovat,
+    když se změní vstup uživatele.
+
+    remember znamená, že hodnotu tohoto stavu
+    si Compose pamatuje mezi změnami zobrazení (recompositions).
+
+    mutableStateOf("") nastavuje počáteční hodnotu
+    jako prázdný textový řetězec.
+    Kdykoliv se stav name změní, Compose znovu vykreslí části,
+    které závisí na této hodnotě.
+
+    */
+
+    // Stavy pro jednotlivé textové vstupy
+    var name by remember { mutableStateOf("") }
+    var surname by remember { mutableStateOf("") }
+    var age by remember { mutableStateOf("") }
+    var place by remember { mutableStateOf("") }
+    var resultText by remember { mutableStateOf("") }
+
 
     // Přidáme Scaffold, abychom mohli přidat TopAppBar
     Scaffold(
