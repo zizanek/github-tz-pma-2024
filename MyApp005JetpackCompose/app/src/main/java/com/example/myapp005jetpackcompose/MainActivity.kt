@@ -105,7 +105,18 @@ fun ComposePerson() {
                 modifier = Modifier.fillMaxWidth()
             )
 
-            
+            OutlinedTextField(
+                value = age,
+                onValueChange = {
+                    // Omezíme vstup na číslice a kontrolujeme, že číslo není větší než 150
+                    if (it.all { char -> char.isDigit() } && it.toIntOrNull()?.let { it <= 123 } == true) {
+                        age = it
+                    }
+                },
+                label = { Text("Věk (hodnota menší než 123)") },
+                modifier = Modifier.fillMaxWidth()
+            )
+
 
         }
 
