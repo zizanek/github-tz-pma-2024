@@ -117,6 +117,13 @@ fun ComposePerson() {
                 modifier = Modifier.fillMaxWidth()
             )
 
+            OutlinedTextField(
+                value = place,
+                onValueChange = { place = it },
+                label = { Text("Bydliště") },
+                modifier = Modifier.fillMaxWidth()
+            )
+
 
         }
 
