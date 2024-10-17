@@ -2,6 +2,7 @@ package com.example.myapp007toastsnackbar
 
 import android.app.Activity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -18,6 +19,16 @@ class MainActivity : AppCompatActivity() {
             // Inicializace ViewBinding
             binding = ActivityMainBinding.inflate(layoutInflater)
             setContentView(binding.root)
+
+            // Nastavení akce pro tlačítko Toast
+            binding.btnShowToast.setOnClickListener {
+
+                val toast = Toast.makeText(this, "Nazdar - mám hlad", Toast.LENGTH_LONG)
+
+                toast.show()
+            }
+
+
 
 
     }
