@@ -25,5 +25,4 @@ interface NoteDao {
     // Načte všechny poznámky a vrátí je jako Flow, které umožňuje pozorování změn
     @Query("SELECT * FROM note_table ORDER BY id DESC")
     fun getAllNotes(): Flow<List<Note>>
-
 }
