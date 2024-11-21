@@ -8,7 +8,8 @@ import com.example.myapp014amynotehub.databinding.ItemNoteBinding
 
 class NoteAdapter(
     private val notes: List<Note>,
-    private val onDeleteClick: (Note) -> Unit  // Funkce pro mazání poznámky
+    private val onDeleteClick: (Note) -> Unit,  // Funkce pro mazání poznámky
+    private val onEditClick: (Note) -> Unit    // Funkce pro editaci poznámky
 ) : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
@@ -40,6 +41,13 @@ class NoteAdapter(
                     .setNegativeButton("Ne", null)
                     .show()
             }
+
+            // Kliknutí na ikonu pro editaci
+            binding.iconEdit.setOnClickListener {
+                onEditClick(note)  // Vyvolání funkce pro editaci poznámky
+            }
+
+
         }
     }
 }
