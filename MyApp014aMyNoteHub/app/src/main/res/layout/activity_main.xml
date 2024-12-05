@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Spinner pro filtrování podle kategorie -->
+    <Spinner
+        android:id="@+id/spinnerFilterCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp" />
+
+    <!-- Tlačítko pro řazení podle názvu -->
+    <Button
+        android:id="@+id/btnSortByName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/spinnerFilterCategory"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Řadit podle názvu" />
+
+    <!-- RecyclerView pro seznam poznámek -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/spinnerFilterCategory"
+        android:padding="16dp" />
+
+    <!-- FAB pro přidání nové poznámky -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:contentDescription="Přidat poznámku"
+        android:src="@drawable/baseline_add_box_24"
+        app:backgroundTint="@color/primaryColor"
+        app:tint="@color/white" />
+</RelativeLayout>

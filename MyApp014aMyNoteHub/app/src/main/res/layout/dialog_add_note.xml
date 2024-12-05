@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Název poznámky" />
+
+    <EditText
+        android:id="@+id/editTextContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Obsah poznámky"
+        android:layout_marginTop="8dp" />
+
+    <!-- Label pro Spinner -->
+    <TextView
+        android:id="@+id/labelCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kategorie"
+        android:textSize="14sp"
+        android:textColor="@color/primaryTextColor"
+        android:layout_marginTop="12dp" />
+
+    <!-- Spinner pro výběr kategorie -->
+    <Spinner
+        android:id="@+id/spinnerCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:spinnerMode="dropdown" />
+</LinearLayout>
